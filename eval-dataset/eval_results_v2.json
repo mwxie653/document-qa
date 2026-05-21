@@ -1,0 +1,407 @@
+[
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "avg_scores": {
+      "accuracy": 7.0,
+      "completeness": 6.5,
+      "conciseness": 8.6,
+      "overall": 7.37,
+      "std": 2.26
+    },
+    "question_results": [
+      {
+        "q_idx": 0,
+        "question": "RAG是什么？它的核心思路是什么？",
+        "reference": "RAG（Retrieval-Augmented Generation，检索增强生成）的核心思路是「先检索，再生成」：在让LLM回答问题之前，先从文档库里找出最相关的内容，把这些内容塞进Prompt，让LLM基于真实文档作答，而不是凭空发挥。",
+        "generated": "根据文档内容，RAG（Retrieval-Augmented Generation，检索增强生成）的核心思路是：**先检索，再生成**。具体来说，在让LLM回答问题之前，先从你的文档库里找出最相关的内容，把这些内容塞进Prompt，让LLM基于真实文档作答，而不是凭空发挥。",
+        "semantic_sim": 0.883,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 1,
+        "question": "LLM有哪三大局限？RAG分别如何解决？",
+        "reference": "三大局限：（1）知识截止日期——模型只知道训练截止前的事，RAG通过把最新文档存入向量库实时检索解决；（2）不了解私有数据——公司内部文档模型完全不知道，RAG通过将内部文档向量化存入本地向量库解决；（3）幻觉（Hallucination）——不知道时会编造答案，RAG强制让LLM基于检索到的真实文档作答。",
+        "generated": "根据文档内容，LLM的三大局限及RAG的解法如下：\n\n1. **知识截止日期**：模型只知道训练截止前的事，对最新内容一无所知。RAG的解法是：把最新文档存入向量库，查询时实时检索。\n\n2. **不了解私有数据**：公司内部文档、数据库、手册，模型完全不知道。RAG的解法是：将内部文档向量化，存入本地向量库。\n\n3. **幻觉（Hallucination）**：不知道时会\"编造\"一个听起来合理的答案。RAG的解法是：强制让LLM基于检索到的真实文档作答。",
+        "semantic_sim": 0.706,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 2,
+        "question": "RAG的完整工作流程分为哪两个阶段？每个阶段包含哪些步骤？",
+        "reference": "分为离线索引阶段和在线查询阶段。离线索引：文档加载→文本切分→Embedding向量化→存入向量数据库。在线查询：用户提问→查询向量化→向量数据库检索top-k→拼接Prompt→LLM生成答案。",
+        "generated": "根据文档内容，RAG 有两个阶段：\n\n1. **离线索引**（建立知识库）\n2. **在线查询**（检索并回答）\n\n文档中未详细列出每个阶段包含的具体步骤。",
+        "semantic_sim": 0.58,
+        "scores": {
+          "accuracy": 8,
+          "completeness": 6,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 3,
+        "question": "文本切分有哪四种常见策略？",
+        "reference": "四种策略：（1）递归字符切分——按分隔符优先级递归切分，默认chunk_size=500、overlap=50；（2）固定字符切分——按固定长度切分，最简单但可能切碎句子；（3）Token切分——按token数量切分，更精确地控制LLM上下文窗口；（4）Markdown标题切分——按文章层级结构切分，保持语义完整性最好。",
+        "generated": "根据文档内容，文本切分的四种常见策略是：\n\n1. 策略二：按固定字符切分\n2. 策略三：按 Token 切分\n3. 策略四：文档特定切分器（针对 Markdown、HTML、代码等特定格式保留文档结构信息）\n4. 推荐策略：RecursiveCharacterTextSplitter（适用于普通文章/手册）",
+        "semantic_sim": 0.644,
+        "scores": {
+          "accuracy": 7,
+          "completeness": 6,
+          "conciseness": 8
+        }
+      },
+      {
+        "q_idx": 4,
+        "question": "RAG在生产环境部署有哪些最佳实践？",
+        "reference": "八大最佳实践：（1）启动时进行环境校验确保模型可用；（2）配置集中管理避免硬编码；（3）使用MMR（最大边际相关性）保证检索结果多样性；（4）元数据过滤提高检索精度；（5）建立质量评估体系衡量RAG效果；（6）结果缓存减少重复LLM调用；（7）异步批处理提升并发性能；（8）知识库持续更新保持内容时效性。",
+        "generated": "根据文档内容，RAG在生产环境部署的最佳实践包括：\n\n1. **环境校验**：启动前检查API Key，提前失败，避免深层报错（validate_environment()）\n2. **配置集中管理**：所有参数在顶部统一定义，一改全生效（如CHUNK_SIZE、TOP_K、MMR_LAMBDA）\n3. **集合生命周期管理**：已有则复用，首次才新建，支持强制重建（load_or_create_vectorstore()）\n4. **分批入库**：大数据量时分批处理，避免内存压力（ingest_batch()）\n5. **来源引用**：每段上下文标注来源，答案可追溯\n\n文档中还提到了实践八：RAG质量评估，但未给出具体描述。",
+        "semantic_sim": 0.782,
+        "scores": {
+          "accuracy": 7,
+          "completeness": 6,
+          "conciseness": 8
+        }
+      },
+      {
+        "q_idx": 5,
+        "question": "什么是MMR？它在RAG中起什么作用？",
+        "reference": "MMR（Maximum Marginal Relevance，最大边际相关性）是一种检索结果多样性算法。它在选择检索结果时，既考虑与查询的相关性，又避免返回与已选结果过于相似的内容。在RAG中用于避免检索到5段几乎一样的内容，保证返回给LLM的信息覆盖面更广。",
+        "generated": "根据提供的文档内容，没有找到关于“MMR”的定义或其在RAG中作用的描述。请提供相关文档内容以便作答。",
+        "semantic_sim": 0.439,
+        "scores": {
+          "accuracy": 1,
+          "completeness": 1,
+          "conciseness": 10
+        }
+      },
+      {
+        "q_idx": 6,
+        "question": "RAG系统中Prompt设计有哪些原则？",
+        "reference": "（1）明确LLM的角色定位（如「你是一个基于文档回答问题的助手」）；（2）限定行为边界（如「只根据以下文档内容回答，不要编造信息」）；（3）指定输出格式（如「用中文回答，引用原文时标明片段编号」）；（4）如果文档中找不到答案，明确告知用户。",
+        "generated": "根据提供的文档内容，没有找到关于RAG系统中Prompt设计原则的信息。文档主要介绍了RAG的核心原理、工作流程、组件（如文本切分器、Embedding模型、向量数据库、LLM）以及文本切分的策略，但未涉及Prompt设计的具体原则。建议查阅其他相关文档获取该信息。",
+        "semantic_sim": 0.433,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 7,
+        "question": "多轮对话RAG中，如何解决用户提问指代不明的问题？",
+        "reference": "通过问题重构（Question Contextualization）解决：在每次检索之前，先将用户当前问题结合历史对话上下文，用LLM重写成独立、完整的问题。例如用户先问「什么是RAG」，然后追问「它有什么优点」，系统会将「它有什么优点」重写为「RAG有什么优点」后再进行检索。",
+        "generated": "根据文档内容，多轮对话RAG中解决用户提问指代不明问题的方法是：通过问题重构（question rewriting），将用户的最新问题改写为一个独立的、完整的问题。具体来说，系统会结合对话历史，将依赖上下文的用户问题（如\"那它呢\"、\"还有哪些\"）改写为不依赖上下文也能被理解的独立问题，然后使用改写后的问题进行检索。这样既保持了LLM生成回答的对话自然感，又保证了检索的精度。",
+        "semantic_sim": 0.707,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 8,
+        "question": "RAG检索模块有哪些优化技巧？",
+        "reference": "（1）选择更适合中文场景的Embedding模型，参考C-MTEB榜单；（2）查询重写或扩展，补充用户问题的语义信息；（3）使用Cross-Encoder Reranker对初检结果重排序；（4）混合检索——向量检索搭配BM25关键词检索，再通过RRF（倒数排序融合）合并结果；（5）优化分块策略——语义分块、父文档检索、RAPTOR层次索引。",
+        "generated": "根据提供的文档内容，没有关于“RAG检索模块优化技巧”的具体信息。文档主要介绍了RAG的定义、核心原理、工作流程和核心组件（如文本切分器、Embedding模型、向量数据库、LLM等），以及文本切分的4种策略，但未涉及检索模块的优化技巧。",
+        "semantic_sim": 0.516,
+        "scores": {
+          "accuracy": 1,
+          "completeness": 1,
+          "conciseness": 8
+        }
+      },
+      {
+        "q_idx": 9,
+        "question": "RAG和LLM长上下文（如128K token）有什么区别？什么时候用RAG更好？",
+        "reference": "长上下文模型可以直接把整个文档塞进去提问，但存在三个问题：（1）成本高——每次传几万token的文档，API费用高；（2）Lost in the Middle现象——模型容易忽略长文本中间部分的信息；（3）无法溯源——不知道答案具体来自哪个段落。RAG更好用的场景：文档量大且需要频繁更新、需要降低API成本、需要答案可追溯到原文、多文档同时查询、数据不能出内网的私有化部署场景。",
+        "generated": "根据文档内容，RAG和LLM长上下文的区别以及RAG的适用场景如下：\n\n**RAG与LLM长上下文的区别：**\n文档中没有直接对比RAG和LLM长上下文（如128K token）的内容。\n\n**什么时候用RAG更好：**\n根据文档中\"LLM的三大局限\"部分，RAG在以下场景更有优势：\n\n1. **处理最新内容**：当需要回答训练截止日期之后的问题时，RAG可以通过检索最新文档来弥补LLM的知识截止日期限制。\n\n2. **处理私有数据**：当需要回答公司内部文档、数据库、手册等LLM不了解的私有数据时，RAG可以将内部文档向量化并存入本地向量库。\n\n3. **避免幻觉**：当需要确保答案的准确性、避免LLM\"编造\"答案时，RAG通过强制让LLM基于检索到的真实文档作答来减少幻觉风险。",
+        "semantic_sim": 0.546,
+        "scores": {
+          "accuracy": 6,
+          "completeness": 5,
+          "conciseness": 7
+        }
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "avg_scores": {
+      "accuracy": 9.4,
+      "completeness": 8.5,
+      "conciseness": 8.1,
+      "overall": 8.67,
+      "std": 0.7
+    },
+    "question_results": [
+      {
+        "q_idx": 0,
+        "question": "本协议的签约主体是谁？最新版本什么时候生效？",
+        "reference": "协议双方是腾讯云计算（北京）有限责任公司与腾讯云用户。最新版本更新和生效日期均为2025年12月23日。",
+        "generated": "根据文档内容，本协议的签约主体是腾讯云计算（北京）有限责任公司（简称腾讯云）与腾讯云用户（以下简称用户或您）。最新版本于2025年12月23日生效。",
+        "semantic_sim": 0.873,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 1,
+        "question": "腾讯云对试用服务（公测或内测）有什么特别说明？",
+        "reference": "公测、内测等试用服务不承诺可用性和可靠性，不建议用于生产环境。",
+        "generated": "根据文档[S5]第3.1条，腾讯云对公测、内测等试用服务的特别说明是：不承诺可用性和可靠性，不建议用于生产环境。",
+        "semantic_sim": 0.406,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 8
+        }
+      },
+      {
+        "q_idx": 2,
+        "question": "用户欠费后怎么处理？违约金利率是多少？",
+        "reference": "欠费每日按万分之五收取违约金。用户需在账单生成后及时支付，对账单有异议需在5个工作日内提出。",
+        "generated": "根据文档内容，用户欠费后每日按万分之五收取违约金（[S1]）。",
+        "semantic_sim": 0.623,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 6,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 3,
+        "question": "腾讯云在什么情况下可以中止或终止服务？重大调整需要提前多久通知？",
+        "reference": "日常维护会提前通知；数据中心裁撤等重大调整需提前30天通知；用户违规时腾讯云有权限制、暂停或终止服务；用户也可自行终止服务或注销账号。",
+        "generated": "根据文档[S1]中的内容，腾讯云在以下情况下可以中止或变更服务：系统日常维护和升级可能短暂中断服务，腾讯云会提前通过官网公告、邮件或短信等方式通知。涉及数据中心裁撤、核心功能变更等重大调整的，腾讯云需提前30天通知用户。",
+        "semantic_sim": 0.879,
+        "scores": {
+          "accuracy": 8,
+          "completeness": 6,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 4,
+        "question": "用户存储在腾讯云上的数据归谁所有？服务终止后数据怎么处理？",
+        "reference": "用户业务数据权利完全归属于用户或其合法权利人。腾讯云未经授权不会访问用户数据。服务终止后数据保留期满腾讯云可删除数据，用户应在终止前自行迁移数据。",
+        "generated": "根据文档内容：\n\n1. **数据所有权**：用户存储在腾讯云上的业务数据，其所有权和知识产权完全归属于用户或用户的合法权利人（文档[S2] 6.1）。\n\n2. **服务终止后的数据处理**：服务终止后，腾讯云将根据服务规则在合理期限内保留用户的数据，期满后腾讯云有权删除数据且不再保留。用户应在服务终止前自行完成数据迁移（文档[S1] 6.2）。",
+        "semantic_sim": 0.761,
+        "scores": {
+          "accuracy": 9,
+          "completeness": 8,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 5,
+        "question": "第五条网络安全和网络秩序中，禁止了哪些内容？",
+        "reference": "禁止发布危害国家安全、淫秽色情、赌博暴力、侮辱诽谤等11类违法内容；禁止从事网络攻击、电信诈骗、垃圾邮件、挖矿、非法VPN等11类违规行为。",
+        "generated": "根据文档[S1]和[S2]部分，第五条“网络安全和网络秩序”中禁止的内容包括：\n\n1. **禁止发布、传输或存储的内容**（[S1]）：\n   - 危害国家安全和社会稳定的信息；\n   - 淫秽、色情、赌博、暴力、凶杀、恐怖或教唆犯罪的信息；\n   - 侮辱或诽谤他人、侵害他人合法权益的信息；\n   - 侵犯他人知识产权或商业秘密的信息；\n   - 含有法律、行政法规禁止的其他内容的信息。\n\n2. **禁止从事的行为**（[S2]）：\n   - 对腾讯云平台或第三方进行网络攻击、网络入侵或干扰网络服务；\n   - 发送垃圾邮件或进行电信诈骗；\n   - 从事虚拟货币挖矿活动；\n   - 搭建或使用非法VPN通道；\n   - 未经授权访问他人计算机系统；\n   - 其他违反法律法规和公序良俗的行为。",
+        "semantic_sim": 0.685,
+        "scores": {
+          "accuracy": 9,
+          "completeness": 8,
+          "conciseness": 6
+        }
+      },
+      {
+        "q_idx": 6,
+        "question": "腾讯云的赔偿上限是多少？哪些损失不承担？",
+        "reference": "赔偿上限为用户就造成损失的具体服务在过去12个月内向腾讯云支付的费用总额。腾讯云不对间接损失（包括利润损失、数据丢失、商誉损失等）承担责任。",
+        "generated": "根据文档[S1]中的内容：\n\n1. **赔偿上限**：腾讯云因违反协议对您承担的赔偿责任，累计上限为您就造成损失的具体服务在过去12个月内向腾讯云实际支付的费用总额。\n\n2. **不承担的损失**：在相关法律允许的最大范围内，腾讯云不对任何间接损失（包括但不限于利润损失、商誉损失、数据丢失、业务中断等）承担赔偿责任。",
+        "semantic_sim": 0.768,
+        "scores": {
+          "accuracy": 9,
+          "completeness": 9,
+          "conciseness": 8
+        }
+      },
+      {
+        "q_idx": 7,
+        "question": "争议解决适用什么法律？协商不成去哪个法院？",
+        "reference": "适用中华人民共和国法律（不包括港澳台地区）。双方先友好协商，协商不成的向深圳市南山区人民法院提起诉讼。",
+        "generated": "根据文档[S1]第11.1条，本协议的订立、执行、解释和争议解决均适用中华人民共和国法律（不包括香港特别行政区、澳门特别行政区和台湾地区的法律）。协商不成的，任何一方可向深圳市南山区人民法院提起诉讼。",
+        "semantic_sim": 0.791,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 8
+        }
+      },
+      {
+        "q_idx": 8,
+        "question": "保密义务持续多久？什么信息不算保密信息？",
+        "reference": "保密义务从获悉时起持续到信息不再具有保密意义为止。保密信息不包括接收方事先已知、公共领域获知、合法从第三方获取或独立开发的信息。",
+        "generated": "根据文档[S1]中的规定：保密义务自获悉保密信息时起持续到该信息不再具有保密意义为止。保密信息不包括在披露时已经公开的信息、接收方在披露前已经知晓的信息、从有权披露的第三方合法获取的信息、以及接收方独立开发的信息。",
+        "semantic_sim": 0.872,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 8
+        }
+      },
+      {
+        "q_idx": 9,
+        "question": "用户授权他人管理账号需要注意什么？",
+        "reference": "被授权人需具备完全民事权利能力和行为能力、已获充分授权。授权变化时应及时修改账号权限和密码。账号信息变更应及时更新，腾讯云有权进行动态核验。",
+        "generated": "根据文档[S3]第2.3条，您授权他人代为注册、操作和管理腾讯云账号时，需确保相关人员具备完全民事权利能力和行为能力，并已获得您充分授权。如授权发生变化，请及时采取修改账号权限、修改账号密码等措施，以保障您的账号、资源及业务等权益。",
+        "semantic_sim": 0.623,
+        "scores": {
+          "accuracy": 9,
+          "completeness": 8,
+          "conciseness": 7
+        }
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "技术手册",
+    "avg_scores": {
+      "accuracy": 8.7,
+      "completeness": 8.2,
+      "conciseness": 8.8,
+      "overall": 8.57,
+      "std": 1.65
+    },
+    "question_results": [
+      {
+        "q_idx": 0,
+        "question": "Streamlit的数据流模型是什么？用户交互时发生了什么？",
+        "reference": "Streamlit采用声明式数据流模型。用户交互（点击按钮、拖动滑块、输入文本）时，整个Python脚本会从上到下重新执行。这意味着不需要手动管理回调函数或状态同步，代码即是UI。",
+        "generated": "根据文档[S1]和[S5]的内容，Streamlit采用**声明式数据流模型**。当用户与界面交互（如点击按钮、拖动滑块、输入文本）时，**整个Python脚本会从上到下重新执行**。这意味着开发者不需要手动管理回调函数或状态同步，代码的执行顺序就是UI的渲染逻辑。但需要注意的是，每次交互都会重新运行整个脚本，所以耗时操作需要配合缓存机制使用。",
+        "semantic_sim": 0.7,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 1,
+        "question": "@st.cache_data和@st.cache_resource有什么区别？分别用在什么场景？",
+        "reference": "@st.cache_data缓存数据处理结果（如读取CSV、数据清洗），避免每次交互重新计算。@st.cache_resource缓存资源型对象（如数据库连接、ML模型），这类对象不需要被pickle序列化且可跨session共享。",
+        "generated": "根据文档内容，`@st.cache_data`和`@st.cache_resource`的区别和适用场景如下：\n\n**区别：**\n- `@st.cache_data`：缓存数据处理结果（如读取CSV、数据清洗、计算），数据会被 pickle 序列化。每次 rerun 时检查函数参数是否变化，参数不变则直接返回缓存结果。\n- `@st.cache_resource`：缓存资源型对象（如数据库连接、ML模型加载、API客户端初始化）。与 cache_data 不同的是，cache_resource 返回的对象不会被 pickle，因此适合不可序列化的资源。\n\n**适用场景：**\n- `@st.cache_data`：用于缓存数据处理结果，例如读取CSV、数据清洗、计算等场景。\n- `@st.cache_resource`：用于缓存资源型对象，例如数据库连接、ML模型加载、API客户端初始化等场景。",
+        "semantic_sim": 0.844,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 2,
+        "question": "如何在Streamlit中持久化用户数据跨多次交互？",
+        "reference": "使用st.session_state，它是跨脚本多次运行的持久化字典。初始化时检查key是否存在（如if 'messages' not in st.session_state），然后像普通字典一样读写。适用于聊天历史、表单累计值等场景。",
+        "generated": "根据文档内容，在Streamlit中持久化用户数据跨多次交互的关键机制是**会话状态（Session State）**。\n\n文档[S6]中说明：\n- `st.session_state` 是跨多次脚本运行持久化数据的关键机制\n- 它是一个类似字典的对象，存储在用户浏览器会话中\n- 典型用法示例：\n  ```python\n  if \"messages\" not in st.session_state:\n      st.session_state.messages = []\n  st.session_state.messages.append({\"role\": \"user\", \"content\": user_input})\n  ```\n- Session State 适用于聊天历史记录、多步骤表单累计值、计数器等需要在多次交互间保持状态的数据\n- 注意：Session State 在用户刷新页面或关闭标签页后会丢失",
+        "semantic_sim": 0.869,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 9,
+          "conciseness": 8
+        }
+      },
+      {
+        "q_idx": 3,
+        "question": "Streamlit和FastAPI如何配合使用？典型架构是什么？",
+        "reference": "Streamlit做前端UI，FastAPI做后端API。FastAPI暴露REST端点（如/query、/upload），Streamlit通过requests库调用这些API获取数据并渲染。前后端分离，可在Docker Compose中分别部署。",
+        "generated": "根据文档内容，Streamlit和FastAPI的配合使用方式如下：\n\n**适用场景**：对于高并发、大规模生产环境，建议配合 FastAPI 后端使用（S1）。\n\n**典型架构**：Streamlit 作为前端界面，FastAPI 作为后端API服务。FastAPI 负责处理请求和业务逻辑（如调用RAG引擎进行检索和生成），Streamlit 负责展示交互界面。\n\n**FastAPI后端示例**（来自S5）：\n```python\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\nfrom fastapi.middleware.cors import CORSMiddleware\n\napp = FastAPI()\napp.add_middleware(CORSMiddleware, allow_origins=[\"*\"], allow_methods=[\"*\"], allow_headers=[\"*\"])\n\nclass QueryRequest(BaseModel):\n    question: str\n    top_k: int = 5\n\n@app.post(\"/query\")\nasync def query(request: QueryRequest):\n    # 此处调用RAG引擎进行检索和生成\n    answer = \"这是基于文档生成的回答\"\n    sources = [\"来源段落1\", \"来源段落2\"]\n    return {\"answer\": answer, \"sources\": sources}\n```\n\n这种架构将前端展示（Streamlit）和后端逻辑（FastAPI）分离，适合需要处理高并发请求的生产环境。",
+        "semantic_sim": 0.67,
+        "scores": {
+          "accuracy": 9,
+          "completeness": 8,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 4,
+        "question": "如何在Streamlit中实现多页面应用？",
+        "reference": "在项目目录下创建pages/文件夹，每个.py文件自动成为一个页面。文件命名建议用数字前缀控制顺序（如01-数据.py、02-图表.py）。主页面是app.py。",
+        "generated": "根据文档[S2]的内容，在Streamlit中实现多页面应用的方法如下：\n\n在项目目录下创建 `pages/` 文件夹，每个 `.py` 文件自动成为一个页面。目录结构示例：\n\n```\nyour_app/\n  app.py          # 主页入口\n  pages/\n    01_数据上传.py\n    02_查询分析.py\n    03_设置.py\n```\n\n文件命名规则：数字前缀控制页面顺序，下划线会显示为空格。",
+        "semantic_sim": 0.864,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 9,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 5,
+        "question": "Streamlit怎么实现聊天界面？用到哪些组件？",
+        "reference": "核心组件：st.chat_input()获取用户输入，st.chat_message('user')和st.chat_message('assistant')创建消息容器，st.session_state存储聊天历史。消息按时间顺序渲染在页面上。",
+        "generated": "根据文档，Streamlit 实现聊天界面需要使用以下组件（需 1.24+ 版本）：\n\n1. **`st.chat_input(\"输入你的问题...\")`**：聊天输入框，固定在页面底部\n2. **`st.chat_message(\"user\")` 和 `st.chat_message(\"assistant\")`**：聊天消息容器\n\n文档中给出的示例用法为：\n- `st.chat_input(\"输入你的问题...\")` 用于接收用户输入\n- `st.chat_message(\"user\")` 和 `st.chat_message(\"assistant\")` 分别用于显示用户和助手的聊天消息",
+        "semantic_sim": 0.618,
+        "scores": {
+          "accuracy": 9,
+          "completeness": 8,
+          "conciseness": 7
+        }
+      },
+      {
+        "q_idx": 6,
+        "question": "Docker部署Streamlit时需要注意什么？",
+        "reference": "Dockerfile中需要EXPOSE 8501端口，启动命令要加--server.address=0.0.0.0允许外部访问。数据持久化通过docker-compose volumes挂载实现。流式输出需确保反向代理配置支持streaming。",
+        "generated": "根据文档内容，没有关于Docker部署Streamlit的具体注意事项。文档中未提及Docker部署相关内容。",
+        "semantic_sim": 0.424,
+        "scores": {
+          "accuracy": 1,
+          "completeness": 1,
+          "conciseness": 10
+        }
+      },
+      {
+        "q_idx": 7,
+        "question": "Streamlit如何做性能优化？有哪些缓存策略？",
+        "reference": "使用@st.cache_data缓存耗时计算，@st.cache_resource缓存模型和连接，st.connection()管理数据库连接。避免在循环中调用st.write()，改用列表拼接后一次性渲染。大DataFrame利用内置分页。",
+        "generated": "根据文档内容，Streamlit的性能优化和缓存策略如下：\n\n**性能优化建议**（来自[S3]）：\n1. 耗时计算使用 `@st.cache_data` 缓存，避免每次交互重算\n2. 大模型或数据库连接使用 `@st.cache_resource` 单例加载\n3. 数据库连接优先使用 `st.connection()` 管理连接池\n4. 避免在循环中多次调用 `st.write()`，改用字符串拼接后一次性渲染\n5. 大DataFrame使用 `st.dataframe()` 内置分页，而非一次性加载全部行\n6. 将静态内容和动态内容分到不同函数中，利用缓存各自独立更新\n7. 图片和静态资源使用 `st.image()` 的 `use_container_width` 参数自适应宽度\n\n**缓存策略**（来自[S2]）：\nStreamlit提供两种缓存装饰器：\n\n1. **`@st.cache_data`**：缓存数据处理结果（如读取CSV、数据清洗、计算），数据会被 pickle 序列化。每次 rerun 时检查函数参数是否变化，参数不变则直接返回缓存结果。\n\n2. **`@st.cache_resource`**：缓存资源型对象（如数据库连接、ML模型加载、API客户端初始化）。与 cache_data 不同的是，cache_resource 返回的对象不会被 pickle，因此适合不可序列化的资源。\n\n示例（来自[S2]）：\n```python\n@st.cache_resource\ndef load_embedding_model():\n    from sentence_transformers import SentenceTransformer\n    return SentenceTransformer(\"paraphrase-multilingual-MiniLM-L12-v2\")\n```",
+        "semantic_sim": 0.942,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 8,
+        "question": "如何自定义Streamlit的主题和外观？",
+        "reference": "在.streamlit/config.toml中设置[theme]段的primaryColor（主色调）、backgroundColor（背景色）、secondaryBackgroundColor（次要背景色）、textColor（文字颜色）、font（字体）等参数。",
+        "generated": "根据文档内容，可以通过以下方式自定义Streamlit的主题和外观：\n\n在 `.streamlit/config.toml` 文件的 `[theme]` 段中设置以下参数：\n- `primaryColor`：主色调\n- `backgroundColor`：背景色\n- `secondaryBackgroundColor`：次要背景色\n- `textColor`：文本颜色\n- `font`：字体\n\n这些参数支持十六进制颜色值和CSS字体名。",
+        "semantic_sim": 0.742,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        }
+      },
+      {
+        "q_idx": 9,
+        "question": "文件上传组件st.file_uploader怎么用？支持哪些文件类型？",
+        "reference": "st.file_uploader('标签', type=['pdf', 'docx', 'txt'])返回UploadedFile对象。通过.read()获取字节内容，通过.name获取文件名。支持在type参数中限制文件扩展名。上传的文件在每次rerun时保持在内存中。",
+        "generated": "根据文档内容，关于 `st.file_uploader` 的使用和文件类型支持，文档中有以下信息：\n\n在[S5]部分提到：\n- `st.file_uploader` 返回 `UploadedFile` 对象或 `None`（未上传时）\n- 通过 `.read()` 获取字节内容，`.name` 获取原始文件名，`.type` 获取MIME类型\n- 上传的文件在每次 rerun 时保持在内存中，不需要重复上传\n\n文档中未明确列出支持的具体文件类型。",
+        "semantic_sim": 0.578,
+        "scores": {
+          "accuracy": 8,
+          "completeness": 7,
+          "conciseness": 9
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environment
+.env
+.venv/
+
+# Data (may contain user documents)
+data/chroma/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Eval temp directories
+eval-dataset/_eval_chroma/
+eval-dataset/_eval_rerank/
+eval-dataset/_arxiv_paper.pdf
+eval-dataset/_llmbook.pdf
+eval-dataset/_llmbook_text.txt
+eval-dataset/_juejin_rag.txt
+eval-dataset/_rag_paper_cn.pdf
+eval-dataset/_pdf_text.txt
+eval-dataset/_extract_paper.py
+eval-dataset/generate_dataset.py
+eval-dataset/build_dataset.py
+eval-dataset/build_final.py
+eval-dataset/fix_quotes.py
+eval-dataset/gen_report.py
+eval-dataset/rescore.py
+eval-dataset/run_eval.py

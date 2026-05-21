@@ -1,0 +1,254 @@
+[
+  {
+    "doc": "RAG教程",
+    "config": "256/100/3",
+    "reranker": "OFF",
+    "avg_sem_sim": 0.533,
+    "avg_llm": 4.5,
+    "details": [
+      {
+        "q_idx": 0,
+        "question": "什么是MMR？它在RAG中起什么作用？",
+        "semantic_sim": 0.439,
+        "scores": {
+          "accuracy": 1,
+          "completeness": 1,
+          "conciseness": 10
+        },
+        "avg": 4.0
+      },
+      {
+        "q_idx": 1,
+        "question": "RAG检索模块有哪些优化技巧？",
+        "semantic_sim": 0.516,
+        "scores": {
+          "accuracy": 1,
+          "completeness": 1,
+          "conciseness": 8
+        },
+        "avg": 3.3
+      },
+      {
+        "q_idx": 2,
+        "question": "文本切分有哪四种常见策略？",
+        "semantic_sim": 0.644,
+        "scores": {
+          "accuracy": 6,
+          "completeness": 5,
+          "conciseness": 8
+        },
+        "avg": 6.3
+      }
+    ]
+  },
+  {
+    "doc": "RAG教程",
+    "config": "256/100/3",
+    "reranker": "ON",
+    "avg_sem_sim": 0.596,
+    "avg_llm": 6.8,
+    "details": [
+      {
+        "q_idx": 0,
+        "question": "什么是MMR？它在RAG中起什么作用？",
+        "semantic_sim": 0.568,
+        "scores": {
+          "accuracy": 9,
+          "completeness": 7,
+          "conciseness": 8
+        },
+        "avg": 8.0
+      },
+      {
+        "q_idx": 1,
+        "question": "RAG检索模块有哪些优化技巧？",
+        "semantic_sim": 0.576,
+        "scores": {
+          "accuracy": 3,
+          "completeness": 2,
+          "conciseness": 8
+        },
+        "avg": 4.3
+      },
+      {
+        "q_idx": 2,
+        "question": "文本切分有哪四种常见策略？",
+        "semantic_sim": 0.644,
+        "scores": {
+          "accuracy": 8,
+          "completeness": 7,
+          "conciseness": 9
+        },
+        "avg": 8.0
+      }
+    ]
+  },
+  {
+    "doc": "技术手册",
+    "config": "512/0/7",
+    "reranker": "OFF",
+    "avg_sem_sim": 0.719,
+    "avg_llm": 7.7,
+    "details": [
+      {
+        "q_idx": 0,
+        "question": "Docker部署Streamlit时需要注意什么？",
+        "semantic_sim": 0.424,
+        "scores": {
+          "accuracy": 1,
+          "completeness": 1,
+          "conciseness": 10
+        },
+        "avg": 4.0
+      },
+      {
+        "q_idx": 1,
+        "question": "如何在Streamlit中持久化用户数据跨多次交互？",
+        "semantic_sim": 0.869,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 9,
+          "conciseness": 8
+        },
+        "avg": 9.0
+      },
+      {
+        "q_idx": 2,
+        "question": "如何在Streamlit中实现多页面应用？",
+        "semantic_sim": 0.864,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 10
+        },
+        "avg": 10.0
+      }
+    ]
+  },
+  {
+    "doc": "技术手册",
+    "config": "512/0/7",
+    "reranker": "ON",
+    "avg_sem_sim": 0.719,
+    "avg_llm": 9.7,
+    "details": [
+      {
+        "q_idx": 0,
+        "question": "Docker部署Streamlit时需要注意什么？",
+        "semantic_sim": 0.424,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        },
+        "avg": 9.7
+      },
+      {
+        "q_idx": 1,
+        "question": "如何在Streamlit中持久化用户数据跨多次交互？",
+        "semantic_sim": 0.869,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        },
+        "avg": 9.7
+      },
+      {
+        "q_idx": 2,
+        "question": "如何在Streamlit中实现多页面应用？",
+        "semantic_sim": 0.864,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        },
+        "avg": 9.7
+      }
+    ]
+  },
+  {
+    "doc": "腾讯云协议",
+    "config": "256/0/5",
+    "reranker": "OFF",
+    "avg_sem_sim": 0.657,
+    "avg_llm": 8.3,
+    "details": [
+      {
+        "q_idx": 0,
+        "question": "腾讯云对试用服务（公测或内测）有什么特别说明？",
+        "semantic_sim": 0.406,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 8
+        },
+        "avg": 9.3
+      },
+      {
+        "q_idx": 1,
+        "question": "腾讯云在什么情况下可以中止或终止服务？重大调整需要提前多久通知？",
+        "semantic_sim": 0.879,
+        "scores": {
+          "accuracy": 8,
+          "completeness": 6,
+          "conciseness": 9
+        },
+        "avg": 7.7
+      },
+      {
+        "q_idx": 2,
+        "question": "第五条网络安全和网络秩序中，禁止了哪些内容？",
+        "semantic_sim": 0.685,
+        "scores": {
+          "accuracy": 9,
+          "completeness": 8,
+          "conciseness": 7
+        },
+        "avg": 8.0
+      }
+    ]
+  },
+  {
+    "doc": "腾讯云协议",
+    "config": "256/0/5",
+    "reranker": "ON",
+    "avg_sem_sim": 0.657,
+    "avg_llm": 8.6,
+    "details": [
+      {
+        "q_idx": 0,
+        "question": "腾讯云对试用服务（公测或内测）有什么特别说明？",
+        "semantic_sim": 0.406,
+        "scores": {
+          "accuracy": 10,
+          "completeness": 10,
+          "conciseness": 9
+        },
+        "avg": 9.7
+      },
+      {
+        "q_idx": 1,
+        "question": "腾讯云在什么情况下可以中止或终止服务？重大调整需要提前多久通知？",
+        "semantic_sim": 0.879,
+        "scores": {
+          "accuracy": 8,
+          "completeness": 7,
+          "conciseness": 9
+        },
+        "avg": 8.0
+      },
+      {
+        "q_idx": 2,
+        "question": "第五条网络安全和网络秩序中，禁止了哪些内容？",
+        "semantic_sim": 0.685,
+        "scores": {
+          "accuracy": 8,
+          "completeness": 7,
+          "conciseness": 9
+        },
+        "avg": 8.0
+      }
+    ]
+  }
+]

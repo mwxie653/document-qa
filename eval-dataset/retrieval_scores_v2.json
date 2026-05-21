@@ -1,0 +1,2108 @@
+[
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 85,
+    "avg_keyword_hit": 0.81,
+    "avg_semantic_sim": 0.655,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.695
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.706
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.564
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.611,
+    "avg_semantic_sim": 0.597,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.295
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 30,
+    "avg_keyword_hit": 0.583,
+    "avg_semantic_sim": 0.78,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.75,
+        "semantic_sim": 0.929
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 85,
+    "avg_keyword_hit": 0.81,
+    "avg_semantic_sim": 0.655,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.695
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.706
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.564
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.634,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.406
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 30,
+    "avg_keyword_hit": 0.65,
+    "avg_semantic_sim": 0.78,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.75,
+        "semantic_sim": 0.929
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.2,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 85,
+    "avg_keyword_hit": 0.81,
+    "avg_semantic_sim": 0.655,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.695
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.706
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.564
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.634,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.406
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 30,
+    "avg_keyword_hit": 0.733,
+    "avg_semantic_sim": 0.78,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.929
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.2,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 99,
+    "avg_keyword_hit": 0.682,
+    "avg_semantic_sim": 0.682,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.333,
+        "semantic_sim": 0.588
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.574
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.611,
+    "avg_semantic_sim": 0.597,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.295
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 32,
+    "avg_keyword_hit": 0.583,
+    "avg_semantic_sim": 0.768,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.75,
+        "semantic_sim": 0.891
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 99,
+    "avg_keyword_hit": 0.682,
+    "avg_semantic_sim": 0.682,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.333,
+        "semantic_sim": 0.588
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.574
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.634,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.406
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 32,
+    "avg_keyword_hit": 0.583,
+    "avg_semantic_sim": 0.768,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.75,
+        "semantic_sim": 0.891
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 99,
+    "avg_keyword_hit": 0.682,
+    "avg_semantic_sim": 0.682,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.333,
+        "semantic_sim": 0.588
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.574
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.634,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.406
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 32,
+    "avg_keyword_hit": 0.733,
+    "avg_semantic_sim": 0.768,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.891
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.2,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 133,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.723,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.706
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.58
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.611,
+    "avg_semantic_sim": 0.597,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.295
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 32,
+    "avg_keyword_hit": 0.583,
+    "avg_semantic_sim": 0.761,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.75,
+        "semantic_sim": 0.871
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 133,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.723,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.706
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.58
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.611,
+    "avg_semantic_sim": 0.597,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.295
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 32,
+    "avg_keyword_hit": 0.65,
+    "avg_semantic_sim": 0.761,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.75,
+        "semantic_sim": 0.871
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.2,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 133,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.723,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.706
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.58
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.634,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.873
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.406
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.623
+      }
+    ]
+  },
+  {
+    "chunk_size": 256,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 32,
+    "avg_keyword_hit": 0.733,
+    "avg_semantic_sim": 0.761,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.871
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.2,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 42,
+    "avg_keyword_hit": 0.365,
+    "avg_semantic_sim": 0.581,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.5,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.167,
+        "semantic_sim": 0.559
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.591
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.611,
+    "avg_semantic_sim": 0.565,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.283
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 14,
+    "avg_keyword_hit": 0.5,
+    "avg_semantic_sim": 0.704,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.5,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 42,
+    "avg_keyword_hit": 0.421,
+    "avg_semantic_sim": 0.587,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.5,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.333,
+        "semantic_sim": 0.559
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.609
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.566,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.286
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 14,
+    "avg_keyword_hit": 0.667,
+    "avg_semantic_sim": 0.704,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 42,
+    "avg_keyword_hit": 0.421,
+    "avg_semantic_sim": 0.587,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.5,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.333,
+        "semantic_sim": 0.559
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.609
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.566,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.286
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 14,
+    "avg_keyword_hit": 0.933,
+    "avg_semantic_sim": 0.804,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.869
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 45,
+    "avg_keyword_hit": 0.794,
+    "avg_semantic_sim": 0.664,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.667,
+        "semantic_sim": 0.695
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.669
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.629
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.611,
+    "avg_semantic_sim": 0.576,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.315
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 14,
+    "avg_keyword_hit": 0.5,
+    "avg_semantic_sim": 0.654,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.5,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.778
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.483
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 45,
+    "avg_keyword_hit": 0.794,
+    "avg_semantic_sim": 0.664,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.667,
+        "semantic_sim": 0.695
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.669
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.629
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.576,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.315
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 14,
+    "avg_keyword_hit": 0.667,
+    "avg_semantic_sim": 0.654,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.778
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.483
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 45,
+    "avg_keyword_hit": 0.794,
+    "avg_semantic_sim": 0.664,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.667,
+        "semantic_sim": 0.695
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.669
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.629
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.576,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.315
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 14,
+    "avg_keyword_hit": 0.933,
+    "avg_semantic_sim": 0.781,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.778
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.866
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 50,
+    "avg_keyword_hit": 0.81,
+    "avg_semantic_sim": 0.641,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.547
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.492
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.611,
+    "avg_semantic_sim": 0.576,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.315
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 15,
+    "avg_keyword_hit": 0.471,
+    "avg_semantic_sim": 0.735,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 0.5,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.2,
+        "semantic_sim": 0.741
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 50,
+    "avg_keyword_hit": 0.81,
+    "avg_semantic_sim": 0.641,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.547
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.492
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.576,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.315
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 15,
+    "avg_keyword_hit": 0.733,
+    "avg_semantic_sim": 0.735,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.2,
+        "semantic_sim": 0.741
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 50,
+    "avg_keyword_hit": 0.81,
+    "avg_semantic_sim": 0.641,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.883
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.547
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.492
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 8,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.576,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.315
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.613
+      }
+    ]
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 15,
+    "avg_keyword_hit": 0.933,
+    "avg_semantic_sim": 0.777,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.866
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.492,
+    "avg_semantic_sim": 0.483,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.333,
+        "semantic_sim": 0.457
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.143,
+        "semantic_sim": 0.399
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.506,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.194
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.524
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.571,
+    "avg_semantic_sim": 0.704,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.568
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.81,
+    "avg_semantic_sim": 0.581,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.676
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.473
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.509,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.205
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.524
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.933,
+    "avg_semantic_sim": 0.804,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.869
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.581,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.676
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.473
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.509,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.205
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.524
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 0,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.933,
+    "avg_semantic_sim": 0.804,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.844
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.869
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.613,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.747
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.498
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.5,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.164
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.537
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.571,
+    "avg_semantic_sim": 0.649,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.483
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.641,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.747
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.583
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.514,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.206
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.537
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.933,
+    "avg_semantic_sim": 0.777,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.866
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 21,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.641,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.747
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.583
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.514,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.206
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.537
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 50,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.933,
+    "avg_semantic_sim": 0.777,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.866
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "RAG教程",
+    "chunk_count": 23,
+    "avg_keyword_hit": 0.81,
+    "avg_semantic_sim": 0.624,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.81
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.429,
+        "semantic_sim": 0.467
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.5,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.164
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.537
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 3,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.571,
+    "avg_semantic_sim": 0.649,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.0,
+        "semantic_sim": 0.483
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "RAG教程",
+    "chunk_count": 23,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.624,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.81
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.467
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.514,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.206
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.537
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 5,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.838,
+    "avg_semantic_sim": 0.777,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.866
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "RAG教程",
+    "chunk_count": 23,
+    "avg_keyword_hit": 0.905,
+    "avg_semantic_sim": 0.624,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.594
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.81
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.714,
+        "semantic_sim": 0.467
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "腾讯云协议",
+    "chunk_count": 4,
+    "avg_keyword_hit": 0.944,
+    "avg_semantic_sim": 0.514,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.799
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.206
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.833,
+        "semantic_sim": 0.537
+      }
+    ]
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 100,
+    "top_k": 7,
+    "doc": "技术手册",
+    "chunk_count": 7,
+    "avg_keyword_hit": 0.933,
+    "avg_semantic_sim": 0.777,
+    "question_scores": [
+      {
+        "q_idx": 0,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.7
+      },
+      {
+        "q_idx": 1,
+        "keyword_hit": 1.0,
+        "semantic_sim": 0.765
+      },
+      {
+        "q_idx": 2,
+        "keyword_hit": 0.8,
+        "semantic_sim": 0.866
+      }
+    ]
+  }
+]

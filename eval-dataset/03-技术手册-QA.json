@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Streamlit的数据流模型是什么？用户交互时发生了什么？",
+    "answer": "Streamlit采用声明式数据流模型。用户交互（点击按钮、拖动滑块、输入文本）时，整个Python脚本会从上到下重新执行。这意味着不需要手动管理回调函数或状态同步，代码即是UI。"
+  },
+  {
+    "question": "@st.cache_data和@st.cache_resource有什么区别？分别用在什么场景？",
+    "answer": "@st.cache_data缓存数据处理结果（如读取CSV、数据清洗），避免每次交互重新计算。@st.cache_resource缓存资源型对象（如数据库连接、ML模型），这类对象不需要被pickle序列化且可跨session共享。"
+  },
+  {
+    "question": "如何在Streamlit中持久化用户数据跨多次交互？",
+    "answer": "使用st.session_state，它是跨脚本多次运行的持久化字典。初始化时检查key是否存在（如if 'messages' not in st.session_state），然后像普通字典一样读写。适用于聊天历史、表单累计值等场景。"
+  },
+  {
+    "question": "Streamlit和FastAPI如何配合使用？典型架构是什么？",
+    "answer": "Streamlit做前端UI，FastAPI做后端API。FastAPI暴露REST端点（如/query、/upload），Streamlit通过requests库调用这些API获取数据并渲染。前后端分离，可在Docker Compose中分别部署。"
+  },
+  {
+    "question": "如何在Streamlit中实现多页面应用？",
+    "answer": "在项目目录下创建pages/文件夹，每个.py文件自动成为一个页面。文件命名建议用数字前缀控制顺序（如01-数据.py、02-图表.py）。主页面是app.py。"
+  },
+  {
+    "question": "Streamlit怎么实现聊天界面？用到哪些组件？",
+    "answer": "核心组件：st.chat_input()获取用户输入，st.chat_message('user')和st.chat_message('assistant')创建消息容器，st.session_state存储聊天历史。消息按时间顺序渲染在页面上。"
+  },
+  {
+    "question": "Docker部署Streamlit时需要注意什么？",
+    "answer": "Dockerfile中需要EXPOSE 8501端口，启动命令要加--server.address=0.0.0.0允许外部访问。数据持久化通过docker-compose volumes挂载实现。流式输出需确保反向代理配置支持streaming。"
+  },
+  {
+    "question": "Streamlit如何做性能优化？有哪些缓存策略？",
+    "answer": "使用@st.cache_data缓存耗时计算，@st.cache_resource缓存模型和连接，st.connection()管理数据库连接。避免在循环中调用st.write()，改用列表拼接后一次性渲染。大DataFrame利用内置分页。"
+  },
+  {
+    "question": "如何自定义Streamlit的主题和外观？",
+    "answer": "在.streamlit/config.toml中设置[theme]段的primaryColor（主色调）、backgroundColor（背景色）、secondaryBackgroundColor（次要背景色）、textColor（文字颜色）、font（字体）等参数。"
+  },
+  {
+    "question": "文件上传组件st.file_uploader怎么用？支持哪些文件类型？",
+    "answer": "st.file_uploader('标签', type=['pdf', 'docx', 'txt'])返回UploadedFile对象。通过.read()获取字节内容，通过.name获取文件名。支持在type参数中限制文件扩展名。上传的文件在每次rerun时保持在内存中。"
+  }
+]

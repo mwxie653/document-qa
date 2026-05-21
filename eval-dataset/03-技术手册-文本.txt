@@ -1,0 +1,206 @@
+Streamlit 开发技术手册 v2.0
+
+1. 概述
+
+Streamlit 是一个开源 Python 框架，可以将 Python 脚本快速转化为交互式 Web 应用。适用于数据仪表盘、机器学习Demo、RAG问答系统、数据标注工具等场景。核心优势是纯Python代码即可构建UI，无需学习HTML/CSS/JavaScript。
+
+主要特性：
+- 声明式API，Python代码即UI逻辑
+- 内置丰富的交互组件（按钮、滑块、输入框、文件上传等）
+- 支持数据可视化（DataFrame、图表、地图）
+- 会话状态管理（Session State）
+- 缓存机制（Cache Data 和 Cache Resource）
+- 主题定制和页面布局
+- 一键部署到 Community Cloud
+
+2. 安装与快速开始
+
+使用 pip 安装 Streamlit：
+pip install streamlit
+
+验证安装：
+streamlit hello  # 打开官方Demo应用
+
+第一个应用 (创建 app.py)：
+import streamlit as st
+x = st.slider("选择一个值", 0, 100, 50)
+st.write(x, "的平方是", x * x)
+
+启动应用：
+streamlit run app.py
+
+默认在 http://localhost:8501 打开。修改代码保存后页面自动刷新。
+
+3. 核心概念
+
+3.1 数据流模型
+
+Streamlit 采用声明式数据流模型。当用户与界面交互（点击按钮、拖动滑块、输入文本）时，整个 Python 脚本会从上到下重新执行。这意味着开发者不需要手动管理回调函数或状态同步，代码的执行顺序就是UI的渲染逻辑。这种设计大大简化了开发心智模型，但需要注意的是：每次交互都会重新运行整个脚本，所以耗时操作需要配合缓存机制使用。
+
+3.2 会话状态（Session State）
+
+st.session_state 是跨多次脚本运行持久化数据的关键机制。它是一个类似字典的对象，存储在用户浏览器会话中。典型用法：
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+st.session_state.messages.append({"role": "user", "content": user_input})
+
+Session State 适用于聊天历史记录、多步骤表单累计值、计数器等需要在多次交互间保持状态的数据。注意：Session State 在用户刷新页面或关闭标签页后会丢失。
+
+3.3 缓存机制
+
+Streamlit 提供两种缓存装饰器：
+- @st.cache_data：缓存数据处理结果（如读取CSV、数据清洗、计算），数据会被 pickle 序列化。每次 rerun 时检查函数参数是否变化，参数不变则直接返回缓存结果。
+- @st.cache_resource：缓存资源型对象（如数据库连接、ML模型加载、API客户端初始化）。与 cache_data 不同的是，cache_resource 返回的对象不会被 pickle，因此适合不可序列化的资源。
+
+示例：
+@st.cache_resource
+def load_embedding_model():
+    from sentence_transformers import SentenceTransformer
+    return SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+
+@st.cache_data
+def process_document(file_bytes):
+    import fitz
+    doc = fitz.open(stream=file_bytes, filetype="pdf")
+    return [page.get_text() for page in doc]
+
+4. 常用组件速查表
+
+文本与数据展示：
+- st.write("内容")：通用输出，自动推断数据类型
+- st.markdown("**粗体**")：Markdown渲染
+- st.dataframe(df)：交互式数据表，支持排序和筛选
+- st.metric("温度", "25 C", delta="2 C")：指标卡片
+- st.json({"key": "value"})：JSON格式化展示
+- st.code("print('hello')", language="python")：代码块
+
+交互组件：
+- st.button("提交")：触发按钮，点击后返回True
+- st.text_input("姓名")：单行文本输入
+- st.text_area("描述")：多行文本输入
+- st.selectbox("选择", ["A", "B", "C"])：下拉选择
+- st.multiselect("多选", ["A", "B", "C"])：多选下拉
+- st.slider("值", min_value=0, max_value=100, value=50)：滑块
+- st.file_uploader("上传文件", type=["pdf", "docx", "txt"])：文件上传
+- st.checkbox("同意")：复选框
+- st.radio("选择", ["选项1", "选项2"])：单选按钮
+
+聊天组件（1.24+版本）：
+- st.chat_input("输入你的问题...")：聊天输入框，固定在页面底部
+- st.chat_message("user") 和 st.chat_message("assistant")：聊天消息容器
+
+反馈与状态：
+- st.spinner("处理中...")：加载动画上下文管理器
+- st.progress(0.5)：进度条
+- st.toast("操作成功")：弹出通知
+- st.expander("展开详情")：可折叠面板
+
+5. 页面布局
+
+5.1 侧边栏布局：
+with st.sidebar:
+    st.title("导航菜单")
+    page = st.radio("选择页面", ["首页", "数据分析", "设置"])
+
+5.2 列布局：
+col1, col2, col3 = st.columns([2, 1, 1])
+with col1: st.metric("温度", "25 C")
+with col2: st.metric("湿度", "60%")
+with col3: st.metric("风速", "3 m/s")
+
+5.3 多页面应用：
+在项目目录下创建 pages/ 文件夹，每个 .py 文件自动成为一个页面：
+your_app/
+  app.py          # 主页入口
+  pages/
+    01_数据上传.py
+    02_查询分析.py
+    03_设置.py
+
+文件命名规则：数字前缀控制页面顺序，下划线会显示为空格。
+
+5.4 选项卡布局：
+tab1, tab2, tab3 = st.tabs(["数据", "图表", "设置"])
+with tab1: st.dataframe(df)
+with tab2: st.line_chart(df)
+with tab3: st.text_input("配置项")
+
+6. 与FastAPI配合使用
+
+Streamlit 适合做前端展示和交互，FastAPI 适合做高性能后端API。典型架构：
+- FastAPI 负责：REST API端点（/query、/upload、/search）、数据库操作、业务逻辑
+- Streamlit 负责：页面渲染、用户交互、结果展示
+- 前后端分离，可在 Docker Compose 中分别部署
+
+FastAPI后端示例：
+from fastapi import FastAPI
+from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+
+class QueryRequest(BaseModel):
+    question: str
+    top_k: int = 5
+
+@app.post("/query")
+async def query(request: QueryRequest):
+    # 此处调用RAG引擎进行检索和生成
+    answer = "这是基于文档生成的回答"
+    sources = ["来源段落1", "来源段落2"]
+    return {"answer": answer, "sources": sources}
+
+Streamlit 调用后端API：
+import requests
+API_URL = "http://localhost:8000"
+response = requests.post(f"{API_URL}/query", json={"question": user_question, "top_k": 5})
+if response.status_code == 200:
+    result = response.json()
+    st.markdown(result["answer"])
+
+7. Docker部署
+
+Streamlit 应用的 Docker 部署非常简单。Dockerfile 核心内容：
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+EXPOSE 8501
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.address=0.0.0.0"]
+
+关键注意事项：
+- 必须设置 --server.address=0.0.0.0，否则容器外无法访问
+- 数据持久化需要通过 docker-compose volumes 挂载目录
+- 如有流式输出需求，确保反向代理（Nginx/Traefik）配置支持 Server-Sent Events
+
+8. 性能优化建议
+
+- 耗时计算使用 @st.cache_data 缓存，避免每次交互重算
+- 大模型或数据库连接使用 @st.cache_resource 单例加载
+- 数据库连接优先使用 st.connection() 管理连接池
+- 避免在循环中多次调用 st.write()，改用字符串拼接后一次性渲染
+- 大DataFrame使用 st.dataframe() 内置分页，而非一次性加载全部行
+- 将静态内容和动态内容分到不同函数中，利用缓存各自独立更新
+- 图片和静态资源使用 st.image() 的 use_container_width 参数自适应宽度
+
+9. 常见问题解答
+
+Q: 如何让应用定时自动刷新？
+A: Streamlit 不自带定时刷新功能。可使用 st.rerun() 配合 asyncio 或 threading 实现轮询，但要注意设置合理的间隔时间避免频繁刷新消耗资源。
+
+Q: 如何隐藏页面右上角的默认菜单？
+A: 在 .streamlit/config.toml 中设置 [ui] hideTopBar = true，或通过启动参数 --client.toolbarMode=minimal。
+
+Q: 如何自定义应用的主题配色？
+A: 在 .streamlit/config.toml 的 [theme] 段中设置 primaryColor、backgroundColor、secondaryBackgroundColor、textColor、font 等参数。支持十六进制颜色值和CSS字体名。
+
+Q: 文件上传组件 st.file_uploader 返回什么类型？如何获取上传文件的内容？
+A: st.file_uploader 返回 UploadedFile 对象或 None（未上传时）。通过 .read() 获取字节内容，.name 获取原始文件名，.type 获取MIME类型。上传的文件在每次 rerun 时保持在内存中，不需要重复上传。
+
+Q: 如何实现用户认证和权限控制？
+A: Streamlit 本身不提供内置认证功能。可以通过第三方库（如 streamlit-authenticator）实现登录验证，或在反向代理层面（Nginx/OAuth2-proxy）做认证，企业版 Streamlit in Snowflake 支持内置认证。
+
+Q: Streamlit 适合生产环境吗？
+A: 适合中小规模的内部工具、数据看板、原型验证等场景。对于高并发、大规模生产环境，建议配合 FastAPI 后端使用或考虑更专业的Web框架。

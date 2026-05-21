@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  doc-qa:
+    build: .
+    container_name: doc-qa
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data              # Chroma 向量数据持久化
+    environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+    restart: unless-stopped
