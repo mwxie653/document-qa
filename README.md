@@ -109,10 +109,6 @@ document-qa/
 3. **语义相似度可预判生成质量**：sem_sim < 0.5 时 LLM 必崩，可用于线上 fail-fast
 4. **预测准确率仅 19%**：基于领域知识的假设与实验数据存在显著差异——先假设再实验的科学评测流程本身比结论更值钱
 
-## 面试准备
-
-项目录入了完整的面试准备材料：[面试准备文档](https://github.com/mwxie653/document-qa/blob/main/eval-dataset/01-RAG%E9%A1%B9%E7%9B%AE%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87.md)（如有）和 [评测报告 PDF](RAG评测报告.pdf)（14页，含技术方案、评测方法、实验数据、面试问答）。
-
 ## License
 
 MIT
