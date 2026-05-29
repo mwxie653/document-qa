@@ -61,8 +61,10 @@ class VectorStore:
         """Remove a document collection by name."""
         try:
             self.client.delete_collection(name=collection_id)
-        except Exception:
-            pass
+        except ValueError:
+            pass  # Collection doesn't exist — nothing to delete
+        except Exception as e:
+            raise RuntimeError(f"Failed to delete collection '{collection_id}': {e}") from e
 
     def list_collections(self) -> list[dict]:
         """List all indexed document collections."""

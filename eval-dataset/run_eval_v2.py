@@ -8,19 +8,22 @@ RAG 双层评测 V2
 
 import json, os, shutil, sys, time, math
 from datetime import datetime
+from pathlib import Path
 
 os.environ["HF_ENDPOINT"] = os.environ.get("HF_ENDPOINT", "https://hf-mirror.com")
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
 
-sys.path.insert(0, "c:/Users/Administrator/document-qa")
+# Use relative paths from repo root
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
 from src.chunker import chunk_text
 from src.embeddings import EmbeddingModel
 from src.vector_store import VectorStore
 from src.deepseek_client import DeepSeekClient
 
-EVAL_DIR = "c:/Users/Administrator/Desktop/eval-dataset"
-CHROMA_DIR = f"{EVAL_DIR}/_eval_chroma"
+EVAL_DIR = str(REPO_ROOT / "eval-dataset")
+CHROMA_DIR = str(Path(EVAL_DIR) / "_eval_chroma")
 
 CHUNK_SIZES = [256, 512, 1024]
 OVERLAPS = [0, 50, 100]
@@ -56,9 +59,10 @@ def get_api_key():
     if key: return key
     try:
         from dotenv import load_dotenv
-        load_dotenv("c:/Users/Administrator/document-qa/.env")
+        load_dotenv(REPO_ROOT / ".env")
         return os.getenv("DEEPSEEK_API_KEY")
-    except: pass
+    except Exception:
+        pass
     return None
 
 

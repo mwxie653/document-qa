@@ -54,13 +54,16 @@ class RAGEngine:
         if self.use_reranker and len(sources) > top_k:
             chunk_texts = [s["text"] for s in sources]
             reranked = self.reranker.rerank(question, chunk_texts, top_k=top_k)
-            # 匹配回原始 sources（保留 metadata）
-            text_to_source = {s["text"]: s for s in sources}
-            sources = []
+            # Rebuild sources from reranked results, preserving metadata by index
+            reranked_sources = []
             for r in reranked:
-                s = text_to_source.get(r["text"], {"text": r["text"], "metadata": {}, "distance": 0})
-                s["rerank_score"] = r["score"]
-                sources.append(s)
+                for s in sources:
+                    if s["text"] == r["text"]:
+                        s_copy = dict(s)
+                        s_copy["rerank_score"] = r["score"]
+                        reranked_sources.append(s_copy)
+                        break
+            sources = reranked_sources
 
         context_parts = []
         for i, s in enumerate(sources):
