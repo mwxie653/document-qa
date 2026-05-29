@@ -32,7 +32,7 @@ class Reranker:
             except OSError:
                 os.environ["HF_HUB_OFFLINE"] = "1"
                 os.environ["TRANSFORMERS_OFFLINE"] = "1"
-                self._model = CrossEncoder(MODEL_NAME)
+                self._model = CrossEncoder(MODEL_NAME, local_files_only=True)
         return self._model
 
     def rerank(

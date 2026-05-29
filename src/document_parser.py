@@ -33,7 +33,9 @@ def parse_document(file_bytes: bytes, filename: str) -> str:
     ext = filename.rsplit(".", 1)[-1].lower() if "." in filename else ""
     if ext == "pdf":
         return parse_pdf(file_bytes)
-    elif ext in ("docx", "doc"):
+    elif ext == "docx":
         return parse_docx(file_bytes)
+    elif ext == "doc":
+        raise ValueError("暂不支持旧版 .doc 格式，请转换为 .docx 后上传")
     else:
         raise ValueError(f"Unsupported file type: .{ext}")

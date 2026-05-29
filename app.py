@@ -141,7 +141,7 @@ if question := st.chat_input("输入你的问题..."):
                 if result["sources"]:
                     with st.expander(" 查看原文引用"):
                         for i, s in enumerate(result["sources"]):
-                            st.caption(f"片段 {i+1}（相似度: {1 - s['distance']:.3f}）")
+                            st.caption(f"片段 {i+1}（距离: {s['distance']:.3f}）")
                             st.text(s["text"])
                             st.divider()
             except Exception as e:
